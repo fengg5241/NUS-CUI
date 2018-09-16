@@ -1,0 +1,16 @@
+void print_b1_to_b2(int n,int b1, int b2){
+    //思路：先转化成10进制的，在调用之前写的10进制转其余进制的方法
+    int lln =1, dec = 0; // dec是保存十进制的数字
+    while (n){
+    
+        dec+=n%b1*lln;
+        
+        lln*=b1;
+        
+        n/=10;
+    
+    }
+    
+    print_10_to_b(dec,b2);
+    
+}
