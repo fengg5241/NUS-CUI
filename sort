@@ -1,0 +1,32 @@
+void swap(int *x, int *y){
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+    
+}
+
+void sort(int *a,int *b,int *c){
+   
+    if(*a > *b){
+        swap(a,b);
+        if(*b > *c){
+            swap(b,c);
+            if(*a > *b) { // 7,5,2
+              swap(a,b); 
+            }else { //7,2,5
+                // do nothing
+            }
+        }else { // 7,2,9
+            // do nothing
+        }
+    }else {
+        if(*b > *c){// 2,7,5
+            swap(b,c); 
+            if(*a>*b){ // 5,7,2
+                swap(a,b); 
+            }
+        }else { // 2,5,7
+            // do nothing
+        }
+    }
+}
